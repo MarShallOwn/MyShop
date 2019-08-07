@@ -88,7 +88,7 @@ namespace MyShop.services
             }
             else
             {
-                item.Quantity = item.Quantity + 1;
+                item.Quantity += 1;
             }
 
             basketContext.Commit();
@@ -106,13 +106,13 @@ namespace MyShop.services
             }
 
         }
-        public List<BasketItemViewModel> GetBasketItem(HttpContextBase httpcontext)
+        public List<BasketItemViewModel> GetBasketItems(HttpContextBase httpcontext)
         {
             Basket basket = GetBasket(httpcontext, false);
 
             if(basket != null)
             {
-                var result = (from b in basket.BasketItems
+                var results = (from b in basket.BasketItems
                               join p in productContext.Collection() on b.ProductId equals p.Id
                               select new BasketItemViewModel()
                               {
@@ -124,7 +124,7 @@ namespace MyShop.services
                               }
                               ).ToList();
 
-                return result;
+                return results;
             }
             else
             {
