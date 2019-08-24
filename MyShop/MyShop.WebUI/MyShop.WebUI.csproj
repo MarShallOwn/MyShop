@@ -300,7 +300,7 @@
       <Name>MyShop.DataAccess.InMemory</Name>
     </ProjectReference>
     <ProjectReference Include="..\MyShop.DataAccess.SQL\MyShop.DataAccess.SQL.csproj">
-      <Project>{662666df-f3a3-4412-a049-d465c6785653}</Project>
+      <Project>{9cd675d3-9b41-4f17-b294-8f043ee0b17f}</Project>
       <Name>MyShop.DataAccess.SQL</Name>
     </ProjectReference>
     <ProjectReference Include="..\MyShop.services\MyShop.services.csproj">

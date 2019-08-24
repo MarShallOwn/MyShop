@@ -71,17 +71,9 @@ namespace MyShop.WebUI.Controllers
                 return View(model);
             }
 
-            string user_name = ""; // in case 'user' is null (user not found)
-            var user = await UserManager.FindByEmailAsync(model.Email);
-
-            if (user != null)
-            {
-                user_name = user.UserName;
-            }
-
             // This doesn't count login failures towards account lockout
             // To enable password failures to trigger account lockout, change to shouldLockout: true
-            var result = await SignInManager.PasswordSignInAsync(user_name, model.Password, model.RememberMe, shouldLockout: false);
+            var result = await SignInManager.PasswordSignInAsync(model.Email, model.Password, model.RememberMe, shouldLockout: false);
             switch (result)
             {
                 case SignInStatus.Success:
@@ -157,7 +149,7 @@ namespace MyShop.WebUI.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = new ApplicationUser { UserName = model.FirstName, Email = model.Email };
+                var user = new ApplicationUser { UserName = model.Email, Email = model.Email };
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {

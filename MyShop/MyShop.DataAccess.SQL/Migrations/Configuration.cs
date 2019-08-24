@@ -10,7 +10,6 @@ namespace MyShop.DataAccess.SQL.Migrations
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
-            ContextKey = "MyShop.DataAccess.SQL.DataContext";
         }
 
         protected override void Seed(MyShop.DataAccess.SQL.DataContext context)
