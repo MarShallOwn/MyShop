@@ -100,5 +100,12 @@ namespace MyShop.WebUI.Controllers
             return View();
         }
 
+        public PartialViewResult GetCustomerName()
+        {
+            Customer customer = customers.Collection().FirstOrDefault(c => c.Email == User.Identity.Name);
+
+            return PartialView(customer);
+        }
+
     }
 }

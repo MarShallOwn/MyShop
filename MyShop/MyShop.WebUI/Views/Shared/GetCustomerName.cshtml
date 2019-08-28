@@ -1,0 +1,10 @@
+﻿@model MyShop.Core.Models.Customer
+@using Microsoft.AspNet.Identity
+@if (Request.IsAuthenticated)
+{
+    <ul class="nav navbar-nav navbar-right">
+        <li>
+            @Html.ActionLink("Hello " + Model.FirstName +" "+ Model.LastName + "!", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" })
+        </li>
+    </ul>
+}
