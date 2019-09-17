@@ -4,4 +4,29 @@
 <h2>@ViewBag.Title.</h2>
 <h3>@ViewBag.Message</h3>
 
-<p>Use this area to provide additional information.</p>
+<style>
+    .map-container {
+        overflow: hidden;
+        padding-bottom: 56.25%;
+        position: relative;
+        height: 0;
+    }
+
+        .map-container iframe {
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+        }
+</style>
+
+@{
+    /*
+    <p>Use this area to provide additional information.</p>
+    */
+}
+
+<div id="map-container-google-1" class="z-depth-1-half map-container" style="height: 500px">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2765.4938292724464!2d29.94269848864181!3d31.21781150001201!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14f5c492f8967641%3A0x65b33eaee05668f2!2sSidi%20Gaber%20Railway%20Station!5e0!3m2!1sen!2seg!4v1568717429389!5m2!1sen!2seg" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+</div>

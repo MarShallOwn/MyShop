@@ -75,8 +75,9 @@ namespace MyShop.WebUI.Controllers
             else
             {
                 ProductManagerViewModel viewModel = new ProductManagerViewModel();
-                viewModel.Product = new Product();
+                viewModel.Product = product;
                 viewModel.ProductCategories = productCategories.Collection();
+
                 return View(viewModel);
             }
         }
