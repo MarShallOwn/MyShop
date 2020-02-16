@@ -1,5 +1,5 @@
 ---
-permalink: MyShop.WebUI/Views/Home/index.html
+permalink: MyShop.WebUI/Views/Home/index.cshtml
 ---
 
 # MyShop
