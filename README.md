@@ -1,3 +1,6 @@
+---
+permalink: MyShop.WebUI/Views/Home/index.cshtml
+---
 
 
 # MyShop
