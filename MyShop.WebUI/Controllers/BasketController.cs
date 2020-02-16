@@ -33,12 +33,19 @@ namespace MyShop.WebUI.Controllers
         {
             basketService.AddToBasket(this.HttpContext, ProductId);
 
-            return RedirectToAction("Index");
+            return RedirectToAction("Index","Home",null);
         }
 
         public ActionResult RemoveFromBasket(string itemId)
         {
-            basketService.RemoveFromBasket(this.HttpContext, itemId);
+            if (itemId != null)
+            {
+                basketService.RemoveFromBasket(this.HttpContext, itemId);
+            }
+            else
+            {
+                basketService.ClearBasket(this.HttpContext);
+            }
 
             return RedirectToAction("Index");
         }
