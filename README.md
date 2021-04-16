@@ -1,2 +1,2 @@
 # MyShop
-My Shop eCommerce Demo
+My Shop eCommerce Using ASP.NET MVC
